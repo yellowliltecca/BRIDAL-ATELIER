@@ -250,3 +250,180 @@ h2{font-size:clamp(48px,5.5vw,76px);line-height:1.02;margin:0}
  .lightbox-prev{left:0}.lightbox-next{right:0}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}}
+
+
+/* Keep the page inside the mobile viewport and prevent sideways drift. */
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+@media (max-width: 700px) {
+  .topline,
+  .header,
+  .hero,
+  .section,
+  .collection,
+  .services,
+  .visit,
+  .contacts,
+  .final-cta,
+  .footer {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .topline {
+    min-width: 0;
+    padding-left: 16px;
+    padding-right: 16px;
+    gap: 10px;
+    overflow: hidden;
+  }
+
+  .topline span {
+    min-width: 0;
+    white-space: nowrap;
+  }
+
+  .header {
+    padding-left: 16px;
+    padding-right: 16px;
+    gap: 8px;
+  }
+
+  .brand {
+    flex: 1 1 auto;
+    min-width: 0;
+    max-width: calc(100% - 145px);
+    gap: 5px;
+    overflow: hidden;
+  }
+
+  .brand-mark {
+    flex: 0 0 30px;
+  }
+
+  .brand-name {
+    min-width: 0;
+    white-space: nowrap;
+    font-size: clamp(18px, 5.4vw, 22px);
+  }
+
+  .brand-sub {
+    flex: 0 0 auto;
+    max-width: 32px;
+    font-size: 5px;
+    letter-spacing: .12em;
+  }
+
+  .menu-toggle {
+    flex: 0 0 39px;
+  }
+
+  .header-cta {
+    flex: 0 0 auto;
+    padding: 10px 9px;
+    font-size: 6.5px;
+    letter-spacing: .1em;
+  }
+
+  .hero {
+    padding-left: 18px;
+    padding-right: 18px;
+    overflow: hidden;
+  }
+
+  .hero-copy {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .hero h1 {
+    width: 100%;
+    max-width: 100%;
+    font-size: clamp(46px, 13vw, 56px);
+    line-height: .98;
+    letter-spacing: -.045em;
+    overflow-wrap: normal;
+  }
+
+  .hero-text {
+    width: 100%;
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+
+  .hero-actions {
+    min-width: 0;
+    max-width: 100%;
+    gap: 12px;
+  }
+
+  .hero-actions .button {
+    min-width: 0;
+    max-width: 100%;
+    padding: 13px 11px;
+    gap: 8px;
+    font-size: 6.5px;
+  }
+
+  .hero-visual {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    height: 420px;
+    overflow: hidden;
+  }
+
+  .hero-stamp {
+    right: 6px;
+  }
+
+  .hero-side-note {
+    right: 5px;
+  }
+
+  .hero-bottom {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    gap: 8px;
+    overflow: hidden;
+    font-size: 5.5px;
+  }
+
+  .collection {
+    overflow: hidden;
+  }
+
+  .collection-heading,
+  .filter-row,
+  .gallery,
+  .gallery-note {
+    width: calc(100% - 36px);
+    max-width: calc(100% - 36px);
+  }
+
+  .gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .gallery-item {
+    min-width: 0;
+  }
+
+  .services,
+  .final-cta {
+    overflow: hidden;
+  }
+
+  .services-inner {
+    width: 100%;
+    max-width: 100%;
+  }
+}
